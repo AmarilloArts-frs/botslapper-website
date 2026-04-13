@@ -221,7 +221,7 @@
         const galleryElement = document.getElementById('gallery');
         const crateTypes = [
             { id: 5,   name: "Butt Crate" },
-            { id: 70,  name: "Holidays Butt Crate"},            
+            { id: 70,  name: "Unavailable - Holidays Butt Crate"},            
             { id: 174, name: "Unavailable - Amarillos's Vault Butt crate"},
             { id: 124, name: "Unavailable - Man Butt Crate" },
             { id: 45,  name: "Unavailable - Spooky Butt Crate" },
@@ -405,6 +405,7 @@
             // Check if this butt is in the "new" list
             const isNew = newButtIDs.includes(Number(item.itemdefid));
 
+            //${crateId === x ? '<p class="vault-tag">LIMITED</p>' : ''} => Add these to give an entire vault tag to all items in the vault crate
             itemElement.innerHTML = `
                 <div class="item-image">
                     <img src="${uncensoredIconUrl}" alt="${item.name}">
@@ -413,10 +414,8 @@
                 <p>Rarity: ${item.rarity}</p>
                 <p>Chance: ${(probability * 100).toFixed(4)}%</p>   
                 ${isNew ? '<p class="new-tag">New</p>' : ''}
-                ${crateId === 70 ? '<p class="vault-tag">LIMITED</p>' : ''}
-                
             `;
-            //${crateId === x ? '<p class="vault-tag">LIMITED</p>' : ''} => Add these to give an entire vault tag to all items in the vault crate
+
             const imageElement = itemElement.querySelector('.item-image');
             imageElement.addEventListener('click', (event) => {
                 const searchQuery = item.name.replace(/ /g, '+');
