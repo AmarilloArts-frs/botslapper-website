@@ -1,3 +1,6 @@
+One Butt Crate every <strong>10 minutes</strong>, for a maximum of <strong>5 Butt Crates per day</strong>.
+/n
+/n
 The game will ask Steam for a Butt Crate every 5 minutes, regardless of that.
 /n
 /n
